@@ -180,3 +180,46 @@ button {
   position: absolute;
   top: 10vh;
   left: 360px; }
+
+.content-header {
+  width: 100%;
+  padding: 50px 0;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  text-align: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column; }
+
+.content-header_socials {
+  padding: 22px 0 0 0; }
+  .content-header_socials ul li {
+    display: inline-block;
+    margin: 0 15px; }
+    .content-header_socials ul li i {
+      font-size: 1.1rem;
+      color: #CACACA; }
+      .content-header_socials ul li i:hover {
+        color: #168a65; }
+
+.header-title {
+  padding: 26px 0 0 0; }
+  .header-title h1 {
+    font-family: "Raleway", sans-serif;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    font-weight: 800;
+    letter-spacing: 10px; }
+
+.header-sub-title {
+  padding: 30px 0 0 0; }
+  .header-sub-title h2 {
+    font-size: 1rem;
+    font-weight: 400;
+    font-style: italic;
+    letter-spacing: .8px;
+    color: #CACACA; }
