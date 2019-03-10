@@ -1,12 +1,12 @@
 //Menu toggle
 
-$(document).ready(function(){
+$(document).ready(function(e){
 	$('.mobile-btn').on('click', function(){
 		$('.menu-wrapper').css('left', '0')
 	});
 
 	$('.nav-btn_close').on('click', function(){
-		$('.menu-wrapper').css('left', '-400' + 'px')
+		$('.menu-wrapper').css('left', '-360' + 'px')
 	});
 
 	// Search
@@ -29,28 +29,25 @@ $(document).ready(function(){
 //Touch and swipe menu
 
 var d = document,
-	swipeMenu = d.querySelector('.swipe-menu'),
+	swipeMenuLeft = d.querySelector('.swipe-menu_left'),
+	swipeMenuRight = d.querySelector('.swipe-menu_right'),
 	menuWrapper = d.querySelector('.menu-wrapper'),
 	coords = 0,
 	getCoords;
 
 getCoords = function(e){
-	if(e.target.className === 'swipe-menu'){
-		coords = e.changedTouches[0].clientX;
-		if(coords > 200){
-			menuWrapper.style.left = 0 + 'px';
-			swipeMenu.style.left = 260 + 'px';
-			// coords = 0;
-		}
 
-		if( coords < 200){
-			menuWrapper.style.left = -400 + 'px';
-			swipeMenu.style.left = 360 + 'px';
-		}
-	}
+	if(e.target.className === 'swipe-menu_left'){
+		menuWrapper.style.left = -360 + 'px';
+	} 
+
+	if(e.target.className === 'swipe-menu_right'){
+		menuWrapper.style.left = 0 + 'px';
+	} 
+	
 }
 
-swipeMenu.addEventListener("touchstart", getCoords, false);
-swipeMenu.addEventListener("touchend", getCoords, false);
-swipeMenu.addEventListener("touchmove", getCoords, false);
+document.addEventListener("touchstart", getCoords, false)
+document.addEventListener("touchend", getCoords, false)
+document.addEventListener("touchmove", getCoords, false)
 
