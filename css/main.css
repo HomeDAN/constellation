@@ -17,7 +17,7 @@ ul {
 
 a {
   text-decoration: none;
-  color: rgba(0, 0, 0, 0.55);
+  color: #c8c8c8;
   font-weight: 600; }
 
 canvas {
@@ -125,7 +125,7 @@ button {
   background: #000207;
   padding: 30px 50px 30px 50px;
   top: 0;
-  left: -400px;
+  left: -360px;
   width: 360px;
   min-width: 320px;
   height: 100vh;
@@ -135,6 +135,10 @@ button {
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
   z-index: 9; }
+  @media only screen and (max-width: 749px) {
+    .menu-wrapper {
+      overflow-y: scroll;
+      overflow-x: hidden; } }
 
 .mobile-btn {
   font-size: 2rem;
@@ -178,12 +182,21 @@ button {
   .main-menu ul li a {
     color: #fff; }
 
-.swipe-menu {
-  width: 100px;
+.swipe-menu_left {
+  width: 50px;
   height: 90vh;
   position: absolute;
   top: 10vh;
-  left: 360px; }
+  left: 310px;
+  z-index: 20; }
+
+.swipe-menu_right {
+  width: 50px;
+  height: 90vh;
+  position: fixed;
+  top: 10vh;
+  left: 0px;
+  z-index: 20; }
 
 .content-header {
   width: 100%;
@@ -206,7 +219,7 @@ button {
     margin: 0 15px; }
     .content-header_socials ul li i {
       font-size: 1.1rem;
-      color: #CACACA; }
+      color: #c8c8c8; }
       .content-header_socials ul li i:hover {
         color: #168a65; }
 
@@ -229,7 +242,7 @@ button {
     font-weight: 400;
     font-style: italic;
     letter-spacing: .8px;
-    color: #CACACA; }
+    color: #c8c8c8; }
     @media only screen and (max-width: 749px) {
       .header-sub-title h2 {
         padding: 0 40px; } }
@@ -355,8 +368,8 @@ button {
 
 .load {
   width: 100%;
-  border-top: 1px solid #CACACA;
-  border-bottom: 1px solid #CACACA;
+  border-top: 1px solid #c8c8c8;
+  border-bottom: 1px solid #c8c8c8;
   text-align: center;
   padding: 27px 0;
   margin: 7px 0 0 0; }
