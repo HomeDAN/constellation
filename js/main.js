@@ -5,7 +5,7 @@ $(document).ready(function(e){
 		$('.menu-wrapper').css('left', '0')
 	});
 
-	$('.nav-btn_close').on('click', function(){
+	$('.nav-btn_close, .content').on('click', function(){
 		$('.menu-wrapper').css('left', '-360' + 'px')
 	});
 
@@ -47,7 +47,7 @@ getCoords = function(e){
 	
 }
 
-document.addEventListener("touchstart", getCoords, false)
-document.addEventListener("touchend", getCoords, false)
+// document.addEventListener("touchstart", getCoords, false)
+// document.addEventListener("touchend", getCoords, false)
 document.addEventListener("touchmove", getCoords, false)
 
